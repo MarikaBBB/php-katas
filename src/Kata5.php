@@ -46,6 +46,6 @@ final class Kata5
 		if ($count % 2 !== 0) {
 			return (int)$array[$middleIndex];
 		}
-		return $array[$middleIndex - 1];
+		return (int)$array[$middleIndex - 1];
 	}
 }
