@@ -34,7 +34,7 @@ final class Kata5
 	public static function median(array $array): int
 	{
 		// TODO: Complete this function!
-		if(empty($array)) {
+		if (empty($array)) {
 			throw new InvalidArgumentException();
 		}
 
@@ -44,7 +44,7 @@ final class Kata5
 		$middleIndex = (int)floor($count / 2);
 
 		if ($count % 2 !== 0) {
-			return $array[$middleIndex];
+			return (int)$array[$middleIndex];
 		}
 		return $array[$middleIndex - 1];
 	}
