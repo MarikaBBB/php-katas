@@ -32,6 +32,16 @@ final class Kata5
 	public static function median(array $array): int
 	{
 		// TODO: Complete this function!
-		return 0;
+
+		sort($array);
+
+		$count = count($array);
+		$middleIndex = floor($count / 2);
+
+		if ($count % 2 !== 0) {
+			return $array[$middleIndex];
+		} 
+		return $array[$middleIndex - 1];
+		
 	}
 }
