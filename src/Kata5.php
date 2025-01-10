@@ -7,6 +7,8 @@ declare(strict_types=1);
 
 namespace Katas;
 
+use InvalidArgumentException;
+
 /**
  * Kata5.
  */
@@ -32,11 +34,14 @@ final class Kata5
 	public static function median(array $array): int
 	{
 		// TODO: Complete this function!
+		if(empty($array)) {
+			throw new InvalidArgumentException();
+		}
 
 		sort($array);
 
 		$count = count($array);
-		$middleIndex = floor($count / 2);
+		$middleIndex = (int)floor($count / 2);
 
 		if ($count % 2 !== 0) {
 			return $array[$middleIndex];
